@@ -9,9 +9,13 @@
         <version>0.0.1-alpha</version>
     </parent>
 
-    <artifactId>common</artifactId>
+    <artifactId>web-spring-boot-starter</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
         <!-- spring-boot-starter-json -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

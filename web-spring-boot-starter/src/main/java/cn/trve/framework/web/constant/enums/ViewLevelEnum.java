@@ -1,4 +1,4 @@
-package cn.trve.framework.common.constant;
+package cn.trve.framework.web.constant.enums;
 
 /**
  * <pre>
@@ -15,7 +15,7 @@ package cn.trve.framework.common.constant;
  * @Date 2023/3/27
  * @since 2023/3/27
  */
-public enum ViewLevel {
+public enum ViewLevelEnum {
     /**
      * 提示
      */

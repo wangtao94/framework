@@ -1,7 +1,7 @@
-package cn.trve.framework.common.model;
+package cn.trve.framework.web.model;
 
 
-import cn.trve.framework.common.util.JsonUtils;
+import cn.trve.framework.web.util.JsonUtils;
 
 import java.io.IOException;
 import java.io.OutputStream;

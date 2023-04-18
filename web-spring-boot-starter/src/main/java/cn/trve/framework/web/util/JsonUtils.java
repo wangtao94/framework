@@ -1,6 +1,6 @@
-package cn.trve.framework.common.util;
+package cn.trve.framework.web.util;
 
-import cn.trve.framework.common.exception.BaseRuntimeException;
+import cn.trve.framework.web.exception.BaseRuntimeException;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
