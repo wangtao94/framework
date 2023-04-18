@@ -1,5 +1,10 @@
 package cn.trve.framework.web.constant.enums;
 
+import org.apache.logging.log4j.util.Strings;
+import org.slf4j.Logger;
+
+import java.lang.reflect.Method;
+
 /**
  * <pre>
  * <b>日志级别</b>
@@ -19,26 +24,37 @@ public enum LogLevelEnum {
     /**
      * 跟踪
      */
-    TRACE,
+    TRACE(),
     /**
      * 调试
      */
-    DEBUG,
+    DEBUG(),
     /**
      * 信息
      */
-    INFO,
+    INFO(),
     /**
      * 警告
      */
-    WARN,
+    WARN(),
     /**
      * 错误
      */
-    ERROR,
+    ERROR(),
     /**
      * 不打印日志
      */
-    NONE,
+    NONE(),
 
+    ;
+
+    public Method getLogMethod() {
+        Method method;
+        try {
+            method = Logger.class.getMethod(Strings.toRootLowerCase(this.name()), String.class, Throwable.class);
+        } catch (NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
+        return method;
+    }
 }

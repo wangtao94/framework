@@ -172,10 +172,10 @@ public class Result<T> {
         /**
          * 状态
          */
-        OK("0", "处理成功"), BAD_REQUEST("1400", "错误的请求"), UNAUTHORIZED("1401", "未认证"),
-        FORBIDDEN("1403", "未授权"), NOT_FOUND("1404", "没有可用的数据"),
-        INTERNAL_SERVER_ERROR("1500", "服务器遇到了一个未曾预料的状况"),
-        SERVICE_UNAVAILABLE("1503", "服务器当前无法处理请求"), ERROR("9999", "错误");
+        OK("web.ok", "处理成功"), BAD_REQUEST("web.badRequest", "错误的请求"), UNAUTHORIZED("web.unauthorized", "未认证"),
+        FORBIDDEN("web.forbidden", "未授权"), NOT_FOUND("web.notFound", "没有可用的数据"),
+        INTERNAL_SERVER_ERROR("web.unknown", "服务器遇到了一个未曾预料的状况"),
+        SERVICE_UNAVAILABLE("web.serviceUnavailable", "服务器当前无法处理请求"), ERROR("web.error", "错误");
         /**
          * 状态码,建议业务名称+数字.
          */
