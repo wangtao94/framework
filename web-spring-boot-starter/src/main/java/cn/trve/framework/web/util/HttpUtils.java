@@ -1,4 +1,4 @@
-package cn.trve.framework.common.util;
+package cn.trve.framework.web.util;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLParameters;
