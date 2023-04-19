@@ -3,7 +3,10 @@ package cn.trve.framework.web.exception;
 import cn.trve.framework.web.constant.dict.SystemConstant;
 import cn.trve.framework.web.constant.enums.LogLevelEnum;
 import cn.trve.framework.web.constant.enums.ViewLevelEnum;
+import org.slf4j.Logger;
 import org.slf4j.helpers.MessageFormatter;
+
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * <pre>
@@ -40,12 +43,12 @@ public class BaseRuntimeException extends RuntimeException {
         super(cause);
     }
 
-    public BaseRuntimeException(String messagePattern,Object... args) {
-        super(MessageFormatter.format(messagePattern,args).getMessage());
+    public BaseRuntimeException(String messagePattern, Object... args) {
+        super(MessageFormatter.format(messagePattern, args).getMessage());
     }
 
-    public BaseRuntimeException(String messagePattern, Throwable cause,Object... args) {
-        super(MessageFormatter.format(messagePattern,args).getMessage(), cause);
+    public BaseRuntimeException(String messagePattern, Throwable cause, Object... args) {
+        super(MessageFormatter.format(messagePattern, args).getMessage(), cause);
     }
 
 
@@ -71,6 +74,19 @@ public class BaseRuntimeException extends RuntimeException {
     public void throwIfFalse(boolean condition) {
         if (!condition) {
             throw this;
+        }
+    }
+
+    /**
+     * 打印日志
+     *
+     * @param logger 日志对象
+     */
+    public void log(Logger logger) {
+        try {
+            this.getLogLevel().getLogMethod().invoke(logger, this.getMessage(), this);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            logger.error("无法打印日志: ", e);
         }
     }
 
