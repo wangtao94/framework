@@ -1,0 +1,93 @@
+{
+  "outputFiles": [
+    {
+      "fileType": "Entity",
+      "outputLocation": "cn.trve.1example.entity",
+      "templateName": "entity.java.btl",
+      "templatePath": null,
+      "builtIn": true,
+      "outputPackage": "cn.trve.example.entity"
+    },
+    {
+      "fileType": "Mapper.xml",
+      "outputLocation": "resources:mapper",
+      "templateName": "mapper.xml.btl",
+      "templatePath": null,
+      "builtIn": true,
+      "outputPackage": "mapper"
+    },
+    {
+      "fileType": "Mapper.java",
+      "outputLocation": "cn.trve.example.mapper",
+      "templateName": "mapper.java.btl",
+      "templatePath": null,
+      "builtIn": true,
+      "outputPackage": "cn.trve.example.mapper"
+    },
+    {
+      "fileType": "Service",
+      "outputLocation": "cn.trve.example.service",
+      "templateName": "service.java.btl",
+      "templatePath": null,
+      "builtIn": true,
+      "outputPackage": "cn.trve.example.service"
+    },
+    {
+      "fileType": "ServiceImpl",
+      "outputLocation": "cn.trve.example.service.impl",
+      "templateName": "serviceimpl.java.btl",
+      "templatePath": null,
+      "builtIn": true,
+      "outputPackage": "cn.trve.example.service.impl"
+    },
+    {
+      "fileType": "Controller",
+      "outputLocation": "cn.trve.example.controller",
+      "templateName": "controller.java.btl",
+      "templatePath": null,
+      "builtIn": true,
+      "outputPackage": "cn.trve.example.controller"
+    }
+  ],
+  "entityStrategy": {
+    "superEntityClass": "cn.trve.framework.db.model.Entity",
+    "superEntityColumns": [
+      "id",
+      "createDate",
+      "createBy",
+      "lastModifiedDate",
+      "lastModifiedBy",
+      "version",
+      "deleted"
+    ],
+    "tableFills": null,
+    "entitySerialVersionUID": true,
+    "entityColumnConstant": false,
+    "activeRecord": true,
+    "entityBuilderModel": false,
+    "entityLombokModel": false,
+    "entityBooleanColumnRemoveIsPrefix": false,
+    "entityTableFieldAnnotationEnable": false,
+    "versionFieldName": null,
+    "logicDeleteFieldName": null,
+    "swagger2": false
+  },
+  "mapperStrategy": {
+    "superMapperClass": "com.baomidou.mybatisplus.core.mapper.BaseMapper"
+  },
+  "mapperXmlStrategy": {
+    "baseResultMap": false,
+    "enableCache": false
+  },
+  "controllerStrategy": {
+    "superControllerClass": null,
+    "restControllerStyle": false,
+    "controllerMappingHyphenStyle": false
+  },
+  "serviceStrategy": {
+    "superServiceClass": "com.baomidou.mybatisplus.extension.service.IService"
+  },
+  "serviceImplStrategy": {
+    "superServiceImplClass": "com.baomidou.mybatisplus.extension.service.impl.ServiceImpl"
+  }
+}
