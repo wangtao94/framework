@@ -1,4 +1,4 @@
-package cn.trve.framework.web.config.prop.bean;
+package cn.trve.framework.web.config.bean;
 
 import cn.trve.framework.web.aop.ExceptionFilter;
 import cn.trve.framework.web.aop.WebExceptionHandler;
